@@ -8,16 +8,18 @@ import Controller.GameController;
 public class Launcher {
 
 	public static void main(String[] args) {
-		Dataset cells = DatasetFactory.createFromObject(new boolean[][] 	{{false, false, false, false, false, false, false, false, false, false},
-			{false, false, false, false, false, false, false, false, false, false},
-			{false, false, false, false, false, false, false, false, false, false},
-			{false, false, false, false, true, false, false, false, false, false},
-			{false, false, false, true, true, true, false, false, false, false},
-			{false, false, false, true, false, true, false, false, false, false},
-			{false, false, false, false, true, false, false, false, false, false},
-			{false, false, false, false, false, false, false, false, false, false},
-			{false, false, false, false, false, false, false, false, false, false},
-			{false, false, false, false, false, false, false, false, false, false}});
+		Dataset cells = DatasetFactory.createFromObject(new boolean[][] 	{{true, false, false, false, false, false, false, false, false, false},
+																			{false, false, false, false, false, false, false, false, false, false},
+																			{false, false, false, false, false, false, false, false, false, false},
+																			{false, false, false, false, true, false, false, false, false, false},
+																			{false, false, false, true, true, true, false, false, false, false},
+																			{false, false, false, true, false, true, false, false, false, false},
+																			{false, false, false, false, true, false, false, false, false, false},
+																			{false, false, false, false, false, false, false, false, false, false},
+																			{false, false, false, false, false, false, false, false, false, false},
+																			{false, false, false, false, false, false, false, false, false, false},
+																			{false, false, false, false, false, false, false, false, false, false},
+																			{false, false, false, false, false, false, false, false, false, true}});
 		GameController myGame = new GameController();
 		int nbRound = 10;
 		for(int round = 1; round<nbRound+1;round++)
