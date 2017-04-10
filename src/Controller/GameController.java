@@ -45,6 +45,11 @@ public class GameController {
 		
 		Dataset slice = toUse.getSlice(new Slice(possibleNeighbors.getInt(0,0), possibleNeighbors.getInt(0,-1)+1), 
 											new Slice(possibleNeighbors.getInt(1,0), possibleNeighbors.getInt(1,-1)+1));
+		
+		if(x== 4 && y==4)
+		{
+			System.out.println(slice.toString(true));
+		}
 
 		int[] shapeFromSlice = slice.getShape();
 		for(int i = 0; i<shapeFromSlice[0]; i++)
