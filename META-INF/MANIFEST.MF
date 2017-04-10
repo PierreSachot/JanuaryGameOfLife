@@ -4,6 +4,5 @@ Bundle-Name: JanuaryGameOfLife
 Bundle-SymbolicName: JanuaryGameOfLife
 Bundle-Version: 1.0.0.qualifier
 Export-Package: Controller,
- Launcher,
- Model
+ Launcher
 Require-Bundle: org.eclipse.january;bundle-version="2.1.0"
