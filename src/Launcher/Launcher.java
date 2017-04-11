@@ -16,16 +16,13 @@ public class Launcher {
 																			{false, false, false, true, false, true, false, false, false, false},
 																			{false, false, false, false, true, false, false, false, false, false},
 																			{false, false, false, false, false, false, false, false, false, false},
-																			{false, false, false, false, false, false, false, false, false, false},
-																			{false, false, false, false, false, false, false, false, false, false},
-																			{false, false, false, false, false, false, false, false, false, false},
-																			{false, false, false, false, false, false, false, false, false, true}});
+																			{false, false, false, false, false, false, false, false, false, false}});
 		GameController myGame = new GameController();
 		int nbRound = 10;
 		for(int round = 1; round<nbRound+1;round++)
 		{
 			int[] shape = cells.getShape();
-			System.out.println(round + " Round\n");
+			System.out.println("\n"+round + " Round");
 			for(int i = 0; i<shape[0];i++)
 			{
 				for(int j = 0; j<shape[1];j++)
