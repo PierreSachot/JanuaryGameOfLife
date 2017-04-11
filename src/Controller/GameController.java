@@ -32,7 +32,6 @@ public class GameController {
 			else
 			{
 				possiblesNeighbors = DatasetFactory.createFromObject(new int[][]{{coordX, coordX+1}, {coordY-1, coordY, coordY+1}});
-				int shapes[] = possiblesNeighbors.getShape();
 				System.out.println(possiblesNeighbors.getInt(0,0)+ " "+ (possiblesNeighbors.getInt(0,-1)+1));
 				currentPos[0] = 0;
 				currentPos[1] = 1;
