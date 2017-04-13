@@ -31,8 +31,7 @@ public class GameController {
 			//r0 c?
 			else
 			{
-				possiblesNeighbors = DatasetFactory.createFromObject(new int[][]{{coordX, coordX+1}, {coordY-1, coordY, coordY+1}});
-				System.out.println(possiblesNeighbors.getInt(0,0)+ " "+ (possiblesNeighbors.getInt(0,-1)+1));
+				possiblesNeighbors = DatasetFactory.createFromObject(new int[][]{{coordX, coordX, coordX+1}, {coordY-1, coordY, coordY+1}});
 				currentPos[0] = 0;
 				currentPos[1] = 1;
 			}
@@ -66,7 +65,7 @@ public class GameController {
 			//r? c0
 			if(coordY == 0)
 			{
-				possiblesNeighbors = DatasetFactory.createFromObject(new int[][]{{coordX-1, coordX, coordX+1}, {coordY, coordY+2}});
+				possiblesNeighbors = DatasetFactory.createFromObject(new int[][]{{coordX-1, coordX, coordX+1}, {coordY, coordY, coordY+2}});
 				currentPos[0] = 1;
 				currentPos[1] = 0;
 			}
@@ -85,23 +84,8 @@ public class GameController {
 				currentPos[1] = 1;
 			}
 		}
-		Slice first;
-		Slice second;
-		if(coordX == 0)
-		{
-			first = new Slice(0, 2);
-			second = new Slice(possiblesNeighbors.getInt(1,0), possiblesNeighbors.getInt(1,-1)+1);
-		}
-		else if(coordY == 0)
-		{
-			first = new Slice(possiblesNeighbors.getInt(0,0), possiblesNeighbors.getInt(0,-1)+1);
-			second = new Slice(0, 2);
-		}
-		else
-		{
-			first = new Slice(possiblesNeighbors.getInt(0,0), possiblesNeighbors.getInt(0,-1)+1);
-			second = new Slice(possiblesNeighbors.getInt(1,0), possiblesNeighbors.getInt(1,-1)+1);
-		}
+		Slice first = new Slice(possiblesNeighbors.getInt(0,0), possiblesNeighbors.getInt(0,-1)+1);
+		Slice second = new Slice(possiblesNeighbors.getInt(1,0), possiblesNeighbors.getInt(1,-1)+1);
 			
 		Dataset slice = toUse.getSlice(first, second);
 
